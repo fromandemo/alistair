@@ -4,8 +4,8 @@ body {
   background-color: #252f38;
 }
 .circle {
-  width: 80px;
-  height: 80px;
+  width: 65px;
+  height: 65px;
   -moz-border-radiu s: 80px;
   -webkit-border-radius: 80px;
   border-radius: 80px;
