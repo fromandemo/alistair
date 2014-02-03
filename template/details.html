@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% load utils %}
+{%block section%}{{ project.name }}{%endblock%}
+{%block nav_item_projects %} {% endblock %}
+{%block nav_item_bio %}  {% endblock %}
+{%block nav_item_skills%} {% endblock %}
+{%block nav_item_contact %} {% endblock %}
+
+{% block carousel %}{%endblock%}
+{% block main_content%}
+
+{% if project %}
+	<h2>{{ project.name }}</h2>
+    <p>
+      {% autoescape off %}
+    	{{ project.description }}
+	    {% endautoescape %}
+	  </p>
+
+    {% for d in details %}
+      <img src="{{ MEDIA_URL }}/uploads/{{ d.main_image|filename }}" class="img-responsive">
+      <h5>{{ d.caption }}</h5>
+    {% endfor %}
+{% else %}
+      <div class="container-centered">
+        <h1>It seems there isn't information for this project.</h1>
+        <p class="lead">Let Alistair know about this.</p>
+      </div>
+{% endif %}
+    
+{% endblock %}

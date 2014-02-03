@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{%block section%}Bio{%endblock%}
+{%block nav_item_projects %} {% endblock %}
+{%block nav_item_bio %} {% endblock %}
+{%block nav_item_skills%} "active circle green" {% endblock %}
+{%block nav_item_contact %} {% endblock %}
+
+{% block carousel %}{%endblock%}
+{% block main_content%}
+
+{% if alistair %}
+  {% autoescape off %}
+    {{ alistair.skills }}
+  {% endautoescape %}
+
+{% else %}
+      <div class="container-centered">
+        <h1>It seems that Alistar is really shy and he doesn't want you to know his skills.</h1>
+        <p class="lead">Be patient.</p>
+      </div>
+{% endif %}
+    
+{% endblock %}

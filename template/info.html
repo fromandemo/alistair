@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+
+{%block section%}Info{%endblock%}
+{%block nav_item_projects %} {% endblock %}
+{%block nav_item_bio %} {% endblock %}
+{%block nav_item_skills%}  {% endblock %}
+{%block nav_item_contact %} "active circle blue" {% endblock %}
+
+{% block carousel %}{%endblock%}
+{% block main_content%}
+
+{% if alistair %}
+  {% autoescape off %}
+    {{ alistair.contact }}
+  {% endautoescape %}
+{% else %}
+	<div class="container-centered">
+        <h1>It seems that Alistair doesn't want to be contacted. Maybe he is working as a *secret* agent.</h1>
+        <p class="lead">He will contact you.</p>
+    </div>  
+{% endif %}
+
+{% endblock %}
