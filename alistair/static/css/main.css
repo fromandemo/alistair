@@ -1,6 +1,6 @@
 body {
   
-  padding-top: 162px;
+  padding-top: 100px;
   background-color: #252f38;
 }
 .circle {
@@ -45,22 +45,10 @@ body {
   margin-right: 30px;
 }
 
-.item {
-  float: left;
+#filters {
+  margin-left: 25px;
+  margin-bottom: 10px;
 }
-.item.w1 { 
-  width: 300px; 
-}
-.item.h1 { 
-  height: 400px; 
-}
-.item.w2 { 
-  width: 300px; 
-}
-.item.h2 { 
-  height: 150px;
-}
-
 .footer {
   background-color: #393E44;
   min-height: 200px;
