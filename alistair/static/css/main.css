@@ -4,13 +4,11 @@ body {
   background-color: #252f38;
 }
 .circle {
-  width: 65px;
-  height: 65px;
-  -moz-border-radiu s: 80px;
-  -webkit-border-radius: 80px;
-  border-radius: 80px;
-  vertical-align: center;
-  text-align: center;
+  width:65px;
+  height:65px;
+  border-radius:100px;
+  line-height:100px;
+  text-align:center;
 }
 
 .red {background: #ff0000;}
@@ -18,7 +16,7 @@ body {
 .green {background: #01b84a;}
 
 .navbar {
-  min-height:100px !important;
+  min-height:100px;
   background-color: #252f38;
   font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
   font-size: 21px;
@@ -42,7 +40,8 @@ body {
   background: transparent;
 }
 .nav>li {
-  margin-right: 30px;
+  min-width: 65px;
+  text-align: center;
 }
 
 #filters {

@@ -10,19 +10,24 @@
 {% block main_content %}
 
 {% if projects %}
-  <div id="main" role="main">
-      <div id="filters" class="btn-group">
+<div class="container">
+  <div id="filters" class="btn-group">
       {% for f in filters %}
          <button type="button" data-filter='["{{f.key}}"]' class="btn btn-default">{{ f.name }}</button>
       {% endfor %}
-      </div>
+  </div>
+</div>
+
+  <div id="main" role="main">
       <ul id="tiles">
         {% for p in projects %}
+        <a href= "/project/{{p.name|remove:' '}}">
         <li data-filter-class='["{{p.category.key}}"]'>
-          <img src="{{ p.main_image_url}}" href= "/project/{{p.name|remove:' '}}"/>
-          <p>{{p.category}}</p>
+          <img src="{{ p.main_image_url}}"/>
+          <p>{{p.category}}</p> 
           <p>{{p.name}}</p>
         </li>
+        </a>
         {% endfor %}
       </ul>
     </div>

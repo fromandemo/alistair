@@ -17,6 +17,8 @@ class Category(models.Model):
     name = models.CharField(max_length=200)
     def __unicode__(self):
         return self.name
+    class Meta:
+        verbose_name_plural = "Categories"
 
 class Project(models.Model):
     STATUS_CHOICES = (
@@ -42,17 +44,6 @@ class ProjectDetail(models.Model):
     main_image_url = models.CharField(max_length=200,null=True, default=None)
     def __unicode__(self):
         return unicode(self.project) + ' - ' + unicode(self.caption)
-
-class CarouselItem(models.Model):
-    title = models.CharField(max_length=200)
-    subtitle = models.CharField(max_length=200)
-    image = models.FileField(upload_to=settings.FILEBROWSER_DIRECTORY)
-    position = models.PositiveSmallIntegerField("Position")
-    def __unicode__(self):
-        return unicode(self.title)
-    class Meta:
-        verbose_name_plural = 'Carousel'
-        ordering = ['position']
     
 class Metadata(models.Model):
     name = models.CharField(max_length=200)
